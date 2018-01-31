@@ -20,7 +20,7 @@ void Controller :: start()
     codeTimer.displayInformation();
     
     //This code below is how to create a loop for the timer. It will executed 100 lines.
-    codeTimer.resetTimer();
+   // codeTimer.resetTimer();
 //    codeTimer.startTimer();
 //   for (int index = 0; index < 100; index++)
 //    {
