@@ -99,9 +99,27 @@ Type Array<Type> :: operator [] (int index) const
     return internalArray[index];
 }
 
+template <class Type>
+int Array<Type> :: getSize() const
+{
+    return size;
+}
 
+template <class Type>
+Type Array<Type> :: getFromIndex(int index)
+{
+    assert(index >=0 && index < size);
+    
+    Type value = internalArray[index];
+    
+    return value;
+}
 
-
-
+template <class Type>
+void Array<Type> :: setAtIndex(int pos, Type item)
+{
+    assert(pos >= 0 && pos< size);
+    internalArray[pos] = item;
+}
 
 #endif /* Array_hpp */
