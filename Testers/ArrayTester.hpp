@@ -9,6 +9,10 @@
 #ifndef ArrayTester_hpp
 #define ArrayTester_hpp
 
-#include <stdio.h>
+#include <iostream>
+#include "../Model/Structures/Array.hpp"
+#include "../Controller/FileController.hpp"
+#include "../Controller/Tools/Timer.hpp"
+
 
 #endif /* ArrayTester_hpp */
