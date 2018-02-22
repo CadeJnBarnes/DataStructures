@@ -96,6 +96,36 @@ Type Queue<Type> :: dequeue()
     return returned;
 }
 
+template <class Type>
+Type Queue<Type> :: remove(int index)
+{
+    assert(index == 0);
+    return dequeue();
+}
+
+template <class Type>
+void Queue<Type> :: clear()
+{
+    while(this->front != nullptr)
+    {
+        cout << dequeue() << endl;
+    }
+}
+
+template <class Type>
+Type Queue<Type> :: peek()
+{
+    assert(this->size > 0);
+    return this->getFront()->getData();
+}
+
+template <class Type>
+Type Queue<Type> :: getFromIndex(int index)
+{
+    assert(index == 0);
+    return peek();
+}
+
 
 
 
