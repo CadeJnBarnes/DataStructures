@@ -55,5 +55,13 @@ LinearNode<Type> * LinearNode<Type> :: getNextNode()
     return next;
 }
 
-
+template <class Type>
+void LinkedList<Type> :: add(Type item)
+{
+    LinearNode<Type> * newData = new LinearNode<Type>(item);
+    
+    if(size == 0)
+    {
+        this->front = newData;
+}
 #endif /* LinearNode_hpp */
