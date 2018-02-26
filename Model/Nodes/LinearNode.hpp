@@ -63,5 +63,6 @@ void LinkedList<Type> :: add(Type item)
     if(size == 0)
     {
         this->front = newData;
-}
+    }
+};
 #endif /* LinearNode_hpp */

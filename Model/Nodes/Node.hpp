@@ -12,6 +12,7 @@
 #include <stdio.h>
 
 template <class Type>
+class Node
 {
 protected:
     Type data;

@@ -9,13 +9,10 @@
 #ifndef LinkedList_hpp
 #define LinkedList_hpp
 
-#include <stdio.h>
+
 #include "List.hpp"
 
 using namespace std;
-
-#ifndef LinkedList_hpp
-#define LinkedList_hpp
 
 template <class Type>
 class LinkedList : public List<Type>
@@ -37,13 +34,17 @@ public:
     Type getFromIndex(int index);
     Type remove(int index);
     
-    LinkedList<Type> :: LinkedList()
-    {
-        this->front = nullptr;
-        this->end = nullptr;
-        this->size = 0;
-    }
 };
+
+template <class Type>
+LinkedList<Type> :: LinkedList()
+{
+    this->front = nullptr;
+    this->end = nullptr;
+    this->size = 0;
+}
+
+template <class Type>
 LinkedList<Type> :: ~LinkedList()
 {
     LinearNode<Type * destroyStructure = front;
@@ -54,7 +55,8 @@ LinkedList<Type> :: ~LinkedList()
         destroyStructure = front;
     }
 }
-  
+
+template <class Type>
 void LinkedList<Type> :: add(Type item)
 {
     LinearNode<Type> * newData = new LinearNode<Type>(item);
@@ -73,6 +75,7 @@ void LinkedList<Type> :: add(Type item)
     this->size += 1;
 }
 
+template <class type>
 void LinkedList<Type> :: addAtIndex(int index, Type item)
 {
     assert(index >= 0 && index <= this->size);
@@ -104,6 +107,7 @@ void LinkedList<Type> :: addAtIndex(int index, Type item)
     }
 }
 
+template <class Type>
 Type LinkedList<Type> :: remove(int index)
 {
     assert(index >= 0 && index < this->size);
@@ -147,14 +151,19 @@ Type LinkedList<Type> :: remove(int index)
     return removedData;
 }
 
+template <class Type>
 LinearNode<Type> * LinkedList<Type> :: getEnd()
 {
     return this->end;
 }
+
+template <class Type>
 LinearNode<Type> * LinkedList<Type> :: getFront()
 {
     return this->front;
 }
+
+template <class Type>
 int LinkedList<Type> :: getSize() const
 {
     return this->size;
