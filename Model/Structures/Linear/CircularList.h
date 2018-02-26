@@ -29,7 +29,7 @@ public:
     Type remove(int index);
     Type getFromIndex(int index);
     int getSize() const;
-}
+};
 
 template <class Type>
 CircularList<Type> :: CircularList()
