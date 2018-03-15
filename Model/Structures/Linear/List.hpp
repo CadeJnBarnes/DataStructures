@@ -30,7 +30,7 @@ public:
     virtual int getSize() const = 0;
     virtual LinearNode<Type> * getFront() = 0;
     virtual LinearNode<Type> * getEnd() = 0;
-}
+};
 
 
 

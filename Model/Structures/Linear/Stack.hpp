@@ -6,8 +6,8 @@
 //  Copyright © 2018 CTEC. All rights reserved.
 //
 
-#ifndef Stack_h
-#define Stack_h
+#ifndef Stack_hpp
+#define Stack_hpp
 
 #include "LinkedList.hpp"
 
@@ -26,7 +26,7 @@ public:
     void addAtIndex(int index, Type data);
     Type getFromIndex(int index);
     Type remove(int index);
-}
+};
 
 template <class Type>
 Stack<Type> :: Stack() : LinkedList<Type>()
@@ -78,11 +78,11 @@ void Stack<Type> :: addAtIndex(int index, Type data)
 template <class Type>
 Type Stack<Type> :: pop()
 {
-    assert (this-size > 0);
+    assert (this->size > 0);
     Type removed = this->front->getData();
     
     LinearNode<Type> * removedNode = this->getFront();
-    this->front  removedNode->getNextNode();
+    this->front = removedNode->getNextNode();
     delete removedNode;
     
     this->size--;
@@ -91,7 +91,7 @@ Type Stack<Type> :: pop()
 }
 
 template <class Type>
-Type Stack<Type> :: removed(int index)
+Type Stack<Type> :: remove(int index)
 {
     assert(index == 0);
     return pop();
@@ -113,4 +113,4 @@ Type Stack<Type> :: getFromIndex(int index)
 
 
 
-#endif /* Stack_h */
+#endif /* Stack_hpp */

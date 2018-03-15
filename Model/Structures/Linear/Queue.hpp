@@ -6,8 +6,8 @@
 //  Copyright © 2018 CTEC. All rights reserved.
 //
 
-#ifndef Queue_h
-#define Queue_h
+#ifndef Queue_hpp
+#define Queue_hpp
 
 #include "LinkedList.hpp"
 #include <iostream>
@@ -30,7 +30,7 @@ public:
     void addAtIndex(int index, Type data);
     Type getFromIndex(int index);
     Type remove(int index);
-}
+};
 
 template <class Type>
 Queue<Type> :: Queue() : LinkedList<Type>()
@@ -129,4 +129,4 @@ Type Queue<Type> :: getFromIndex(int index)
 
 
 
-#endif /* Queue_h */
+#endif /* Queue_hpp */

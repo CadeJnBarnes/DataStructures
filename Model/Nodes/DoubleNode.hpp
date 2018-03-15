@@ -1,13 +1,10 @@
 //
-//  DoubleNode.h
+//  DoubleNode.hpp
 //  DataStructures
 //
-//  Created by Barnes, Cade on 2/26/18.
+//  Created by Barnes, Cade on 3/9/18.
 //  Copyright © 2018 CTEC. All rights reserved.
 //
-
-#ifndef DoubleNode_h
-#define DoubleNode_h
 
 #include "Node.hpp"
 
@@ -77,10 +74,4 @@ Double Node<Type> * DoubleNode<Type> :: getNext()
     return next;
 }
 
-
-
-
-
-
-
-#endif /* DoubleNode_h */
+#endif /* DoubleNode_hpp */

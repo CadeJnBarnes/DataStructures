@@ -13,8 +13,9 @@
 #include "FileController.hpp"
 #include <vector>
 #include <iostream>
-#include "../Model/Structures/Array.hpp"
+#include "../Model/Structures/Linear/Array.hpp"
 #include "../Testers/ArrayTester.hpp"
+#include "../Testers/RecursionTester.hpp"
 
 
 class Controller

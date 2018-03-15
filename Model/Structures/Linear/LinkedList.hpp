@@ -11,6 +11,9 @@
 
 
 #include "List.hpp"
+#include "../../Nodes/LinearNode.hpp"
+#include <iostream>
+#include <assert.h>
 
 using namespace std;
 
@@ -29,10 +32,10 @@ public:
     LinearNode<Type> * getFront();
     LinearNode<Type> * getEnd();
     
-    void add(Type item);
-    void addAtIndex(int index, Type item);
-    Type getFromIndex(int index);
-    Type remove(int index);
+    virtual void add(Type item);
+    virtual void addAtIndex(int index, Type item);
+    virtual Type getFromIndex(int index);
+    virtual Type remove(int index);
     
 };
 
@@ -47,7 +50,7 @@ LinkedList<Type> :: LinkedList()
 template <class Type>
 LinkedList<Type> :: ~LinkedList()
 {
-    LinearNode<Type * destroyStructure = front;
+    LinearNode<Type> * destroyStructure = front;
     while (front != nullptr)
     {
         front = destroyStructure->getNextNode();
@@ -75,7 +78,7 @@ void LinkedList<Type> :: add(Type item)
     this->size += 1;
 }
 
-template <class type>
+template <class Type>
 void LinkedList<Type> :: addAtIndex(int index, Type item)
 {
     assert(index >= 0 && index <= this->size);
@@ -108,6 +111,25 @@ void LinkedList<Type> :: addAtIndex(int index, Type item)
 }
 
 template <class Type>
+Type LinkedList<Type> :: getFromIndex(int index)
+{
+    assert(index >= 0 && index < this->size);
+    Type data;
+    
+    LinearNode<Type> * current = front;
+    
+    for (int position = 0; position < index; position++)
+    {
+        current = current->getNextNode();
+    }
+    
+    data = current->getData();
+    
+    return data;
+}
+
+
+template <class Type>
 Type LinkedList<Type> :: remove(int index)
 {
     assert(index >= 0 && index < this->size);
@@ -125,7 +147,7 @@ Type LinkedList<Type> :: remove(int index)
     }
     else
     {
-        for (int position - 0; position < index; position++)
+        for (int position = 0; position < index; position++)
         {
             previous = current;
             current = current->getNextNode();
@@ -147,7 +169,7 @@ Type LinkedList<Type> :: remove(int index)
     this->size -= 1;
     
     removedData = toBeRemoved->getData();
-    delete toBeRemoved
+    delete toBeRemoved;
     return removedData;
 }
 

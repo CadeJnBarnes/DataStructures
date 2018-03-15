@@ -6,8 +6,8 @@
 //  Copyright © 2018 CTEC. All rights reserved.
 //
 
-#ifndef CircularList_h
-#define CircularList_h
+#ifndef CircularList_hpp
+#define CircularList_hpp
 
 #include "List.hpp"
 #include "../../Node/DoubleNode.hpp"
@@ -191,4 +191,4 @@ LinearNode<Type> * CircularList<Type> :: getEnd()
 
 
 
-#endif /* CircularList_h */
+#endif /* CircularList_hpp */
