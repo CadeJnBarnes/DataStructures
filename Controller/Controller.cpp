@@ -12,35 +12,37 @@ using namespace std;
 
 void Controller :: start()
 {
+        SortingTester my;
+        my.testSorts();
     
-    RecursionTester myTest4;
-    myTest4.testRecursionNumbers();
-
-    ArrayTester myTest;
-    myTest.testArrayUse();
-    myTest.testAdvancedArray();
-
-    findMaxAndMin();
-
-    cout << "Testing the Timer class" << endl;
-    Timer codeTimer;
-    codeTimer.startTimer();
-    vector<CrimeData> myData = FileController :: readCrimeDataToVector("/Users/cbar1386/Documents/Data Structures 2018/DataStructures/DataStructures/Controller/Controller.cpp");
-    codeTimer.stopTimer();
-    codeTimer.displayInformation();
-
-    
-    
-  //  This code below is how to create a loop for the timer. It will executed 100 lines.
-    codeTimer.resetTimer();
-    codeTimer.startTimer();
-   for (int index = 200; index < 215; index++)
-    {
-        cout << "The index is " << index << "\t" << myData[index] << endl;
-   }
-   codeTimer.stopTimer();
- codeTimer.displayInformation();
-    
+//    RecursionTester myTest4;
+//    myTest4.testRecursionNumbers();
+//
+//    ArrayTester myTest;
+//    myTest.testArrayUse();
+//    myTest.testAdvancedArray();
+//
+//    findMaxAndMin();
+//
+//    cout << "Testing the Timer class" << endl;
+//    Timer codeTimer;
+//    codeTimer.startTimer();
+//    vector<CrimeData> myData = FileController :: readCrimeDataToVector("/Users/cbar1386/Documents/Data Structures 2018/DataStructures/DataStructures/Controller/Controller.cpp");
+//    codeTimer.stopTimer();
+//    codeTimer.displayInformation();
+//
+//
+//
+//  //  This code below is how to create a loop for the timer. It will executed 100 lines.
+//    codeTimer.resetTimer();
+//    codeTimer.startTimer();
+//   for (int index = 200; index < 215; index++)
+//    {
+//        cout << "The index is " << index << "\t" << myData[index] << endl;
+//   }
+//   codeTimer.stopTimer();
+// codeTimer.displayInformation();
+//
 
 }
 
