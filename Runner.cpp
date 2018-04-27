@@ -9,6 +9,7 @@
 
 #include "Controller/Controller.hpp"
 
+using namespace std;
 int main()
 {
     Controller app;
