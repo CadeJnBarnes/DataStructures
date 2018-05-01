@@ -19,6 +19,8 @@ private:
     long size;
     long capacity;
     double loadFactor;
+    
+    long getNextPrime();
     bool isPrime(long current);
     void resize();
     long findPosition(HashNode<Type>* insertedNode);
@@ -50,9 +52,44 @@ HashTable<Type> :: ~HashTable()
 }
 
 template <class Type>
-long HashTable<Type> :: isPrime(long currentNumber)
+long HashTable<Type> :: getNextPrime()
 {
-    return false;
+    long nextPrime = (this->capacity * 2) + 1;
+    
+    while ( !isPrime(nextPrime))
+    {
+        nextPrime += 2;
+    }
+    
+    return nextPrime;
+}
+
+template <class Type>
+bool HashTable<Type> :: isPrime(long current)
+{
+    if (candidateNumber <= 1)
+    {
+        return false;
+    }
+    else if(current == 2 || current == 3)
+    {
+        return true;
+    }
+    else if(current % 2 == 0)
+    {
+        return false;
+    }
+    else
+    {
+        for(int next = 3; next <= sqrt(current) +1; next += 2)
+        {
+            if(current % next == 0)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
 }
 
 template <class Type>
