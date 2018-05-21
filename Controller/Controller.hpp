@@ -18,6 +18,7 @@
 #include "../Testers/RecursionTester.hpp"
 #include "../Testers/SortingTester.hpp"
 #include "../Testers/GraphTester.hpp"
+#include "../Model/Structures/Linear/LinkedList.hpp"
 
 
 class Controller
