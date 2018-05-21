@@ -8,7 +8,7 @@
 
 #ifndef HashNode_hpp
 #define HashNode_hpp
-#include "Node.hpp"
+#include "Node.hpp"Hash
 #include <stdio.h>
 template <class Type>
 class HashNode : public Node<Type>
